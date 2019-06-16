@@ -19,8 +19,7 @@ public class BookDao {
     }
 
     public Book get(Long id){
-        Book book = entityManager.find(Book.class, id);
-        return book;
+        return entityManager.find(Book.class, id);
     }
 
     public void delete(Long id){

@@ -20,8 +20,7 @@ public class UserDao {
     }
 
     public User get(Long id){
-        User user = entityManager.find(User.class, id);
-        return user;
+        return entityManager.find(User.class, id);
     }
 
     public void delete(Long id){
