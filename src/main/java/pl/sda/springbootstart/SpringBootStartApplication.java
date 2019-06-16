@@ -26,6 +26,27 @@ public class SpringBootStartApplication {
 
         bookDao.save(book);
 
+        Book book1 = bookDao.get(1L);
+        System.out.println(book1);
+
+        Book book2 = new Book();
+        book2.setIsbn("92384798");
+        book2.setAuthor("Jan Kowalski");
+        book2.setTitle("Abecadlo");
+        book2.setPages(213);
+
+        bookDao.save(book2);
+
+        Book book3 = bookDao.get(2L);
+        System.out.println(book3);
+
+ //       bookDao.delete(2L);
+
+        book3.setAuthor("Grzegorz Nowak");
+        book3.setTitle("Abecadlo 2.0");
+        bookDao.update(book3);
+
+
         context.close();
 
 	}

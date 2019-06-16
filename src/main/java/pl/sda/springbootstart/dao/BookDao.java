@@ -23,4 +23,14 @@ public class BookDao {
         return book;
     }
 
+    public void delete(Long id){
+        Book foundBook = entityManager.find(Book.class, id);
+        entityManager.remove(foundBook);
+    }
+
+    public Book update(Book book){
+        entityManager.merge(book);
+        return book;
+    }
+
 }
