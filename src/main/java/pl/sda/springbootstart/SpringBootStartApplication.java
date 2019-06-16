@@ -121,7 +121,7 @@ public class SpringBootStartApplication {
             //wszystkie samochody z daną marką i modelem oraz ceną mniejszą niż... posortowane po cenie malejąco
             carRepository.findCarByBrandAndModelAndPriceParams("Opel", "Astra", 16000.000);
             System.out.println("============================================");
-            
+
             context.close();
 
 	}
